@@ -1,8 +1,8 @@
-import "./App.css";
+import "./Home.css";
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement } from "./reducers/slices/counterSlice";
+import { increment, decrement } from "../../reducers/slices/counterSlice";
 
-function App() {
+function Home() {
   const count = useSelector((state) => state.counter);
   const dispatch = useDispatch();
 
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
