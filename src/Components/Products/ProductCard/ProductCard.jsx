@@ -3,15 +3,12 @@ import { useEffect } from "react";
 import { useState } from "react";
 import useImage from "../../../Hooks/useImage";
 
-const ProductCard = ({ name, price, img }) => {
+const ProductCard = ({ name, price, img, Id }) => {
   //   const [image, setImage] = useState("https://via.placeholder.com/120x174");
-  useEffect(() => {
-    console.log(img.toString());
-  });
   const { loading, error, image } = useImage(img.toString());
 
   return (
-    <div>
+    <div key={Id}>
       {image && <img src={image} />}
       {error && <p>{error}</p>}
       <h3>{name}</h3>
