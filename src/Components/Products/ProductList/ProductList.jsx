@@ -1,13 +1,9 @@
 import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
-import Products from "../../../Static/Products";
 import styles from "./ProductList.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import {
-  allProducts,
-  filterProducts,
-} from "../../../reducers/slices/productSlice";
+import { allProducts, filterProducts } from "../../../reducers/productSlice";
 
 const ProductList = () => {
   const products = useSelector((state) => state.products.products);
