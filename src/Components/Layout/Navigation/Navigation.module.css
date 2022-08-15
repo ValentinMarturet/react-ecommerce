@@ -5,12 +5,17 @@
   align-items: center;
   padding: 1rem 0;
   border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
 .logo {
   width: auto;
   height: 1.5rem;
-  margin-right: 6rem;
+  margin-right: auto;
 }
 
 .navbar {

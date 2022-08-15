@@ -1,13 +1,9 @@
 import "./Home.css";
-
+import Layout from "../../Components/Layout/Layout";
 import Navigation from "../../Components/Layout/Navigation/Navigation";
 
 function Home() {
-  return (
-    <div className="App">
-      <Navigation />
-    </div>
-  );
+  return <Layout>{/* <Navigation /> */}</Layout>;
 }
 
 export default Home;

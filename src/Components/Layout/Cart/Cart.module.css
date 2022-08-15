@@ -1,0 +1,21 @@
+.cart {
+  position: fixed;
+  right: -300px;
+  background-color: #fff;
+  height: 100%;
+  width: 300px;
+  transition: 500ms ease-in-out;
+}
+
+.cart_on {
+  right: 0;
+}
+
+@media (min-width: 640px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1280px) {
+}

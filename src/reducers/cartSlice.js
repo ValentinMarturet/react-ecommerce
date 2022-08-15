@@ -20,7 +20,7 @@ export const cartSlice = createSlice({
           .indexOf(action.payload.id);
         state.cartItems[index].quantity += action.payload.quantity;
       } else {
-        state.cartItems = state.cartItems.push(payload);
+        state.cartItems.push(action.payload);
       }
     },
     deleteItem: (state, action) => {
@@ -40,6 +40,12 @@ export const cartSlice = createSlice({
 //     id: Number,
 //     quantity: number
 // }
+
+// const idInArray = (array, newItem) => {
+//   return array.some((element) => {
+//     return element.id === newItem.id;
+//   });
+// };
 
 export const { toggle, addItem, deleteIte, clearCart } = cartSlice.actions;
 

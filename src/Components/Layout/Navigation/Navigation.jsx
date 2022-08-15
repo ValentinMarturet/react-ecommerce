@@ -4,8 +4,12 @@ import styles from "./Navigation.module.css";
 import logo from "../../../assets/Logo/default-monochrome-black.svg";
 import { CgShoppingBag } from "react-icons/cg";
 import { IconContext } from "react-icons";
+import { useDispatch } from "react-redux";
+import { toggle } from "../../../reducers/cartSlice";
 
 const Navigation = () => {
+  const dispatch = useDispatch();
+
   return (
     <header className={styles.container}>
       <img className={styles.logo} src={logo} alt="Logo" />
@@ -29,7 +33,7 @@ const Navigation = () => {
           style: { verticalAlign: "middle", pointerEvents: "none" },
         }}
       >
-        <div onClick={() => {}} className={styles.cart_icon}>
+        <div onClick={() => dispatch(toggle())} className={styles.cart_icon}>
           <CgShoppingBag />
         </div>
       </IconContext.Provider>

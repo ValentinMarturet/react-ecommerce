@@ -26,6 +26,7 @@ const ProductList = () => {
                 name={current.title}
                 price={current.price}
                 img={current.sku}
+                Id={current.id}
                 key={current.id}
               />
             );
