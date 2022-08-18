@@ -27,7 +27,8 @@ export const cartSlice = createSlice({
       const index = state.cartItems
         .map((item) => item.id)
         .indexOf(action.payload.id);
-      state.cartItems = state.cartItems.splice(index, 1);
+      console.log(index);
+      state.cartItems.splice(index, 1);
     },
     clearCart: (state) => {
       state.cartItems = initialState.cartItems;
@@ -47,6 +48,6 @@ export const cartSlice = createSlice({
 //   });
 // };
 
-export const { toggle, addItem, deleteIte, clearCart } = cartSlice.actions;
+export const { toggle, addItem, deleteItem, clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

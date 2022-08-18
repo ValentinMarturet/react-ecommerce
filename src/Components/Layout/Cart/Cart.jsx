@@ -21,12 +21,13 @@ const Cart = () => {
           return (
             <CartCard
               name={products[index].title}
+              img={products[index].sku}
               id={element.id}
               cant={element.quantity}
             />
           );
         })}
-      <button onClick={() => console.log(isShowing)}>log</button>
+      <button onClick={() => console.log(cartItems)}>log</button>
     </div>
   );
 };
