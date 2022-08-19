@@ -48,6 +48,22 @@
   background-color: #eee;
 }
 
+.cart_dot {
+  position: relative;
+  left: 1.4rem;
+  top: -0.4rem;
+}
+
+.cart_dot::after {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #de1a1a;
+  border-radius: 10px;
+}
+
 @media (min-width: 640px) {
 }
 @media (min-width: 768px) {

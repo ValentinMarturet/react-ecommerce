@@ -1,6 +1,12 @@
-.container {
-  padding: 1.5rem 200px;
-
+.product_container {
+  padding: 1.5rem 200px 3rem;
   display: flex;
   justify-content: space-around;
+  border-bottom: 1px solid #eee;
+}
+
+.section_title {
+  text-align: center;
+  color: #353535;
+  margin-top: 3rem;
 }

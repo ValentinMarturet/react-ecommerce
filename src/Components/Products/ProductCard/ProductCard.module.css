@@ -6,6 +6,7 @@
 
 .btn {
   font-weight: 600;
+  font-size: 0.8rem;
   border-style: none;
   border-radius: 5px;
   padding: 15px;
@@ -17,6 +18,7 @@
 .details {
   background-color: #353535;
   color: #fff;
+  text-decoration: none;
 }
 
 .details:hover {

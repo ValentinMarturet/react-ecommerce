@@ -30,10 +30,14 @@ const Navigation = () => {
       <IconContext.Provider
         value={{
           size: "1.5rem",
-          style: { verticalAlign: "middle", pointerEvents: "none" },
+          style: {
+            verticalAlign: "middle",
+            pointerEvents: "none",
+          },
         }}
       >
         <div onClick={() => dispatch(toggle())} className={styles.cart_icon}>
+          <div className={`${styles.cart_dot}`}></div>
           <CgShoppingBag />
         </div>
       </IconContext.Provider>

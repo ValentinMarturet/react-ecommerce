@@ -20,6 +20,16 @@
   border-left: 1px solid #eee;
 }
 
+.empty_text {
+  text-align: center;
+  vertical-align: center;
+  margin-top: 10rem;
+  padding: 0 20px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(146, 146, 146);
+}
+
 @media (min-width: 640px) {
 }
 @media (min-width: 768px) {
