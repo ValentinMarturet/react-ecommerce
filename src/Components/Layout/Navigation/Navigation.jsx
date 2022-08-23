@@ -24,7 +24,7 @@ const Navigation = () => {
         <Link className={styles.nav_item} to="/">
           Sobre Nosotros
         </Link>
-        <Link className={styles.nav_item} to="/">
+        <Link className={styles.nav_item} to="/contact">
           Contacto
         </Link>
       </nav>
