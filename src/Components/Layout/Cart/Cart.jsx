@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { allProducts } from "../../../reducers/productSlice";
+import { useSelector } from "react-redux";
 import CartCard from "../CartCard/CartCard";
 import styles from "./Cart.module.css";
 
@@ -14,12 +13,6 @@ const Cart = () => {
       return "";
     }
   };
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(allProducts());
-  }, []);
 
   return (
     <div className={`${styles.cart} ${showCart()}`}>

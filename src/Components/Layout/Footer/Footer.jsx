@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div
-      style={{ marginTop: "100px", paddingBottom: "20px", color: "#353535" }}
+      style={{ marginTop: "200px", paddingBottom: "20px", color: "#353535" }}
     >
       <a
         style={{ color: "#353535" }}

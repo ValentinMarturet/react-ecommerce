@@ -1,4 +1,47 @@
 .container {
   display: flex;
   justify-content: center;
+  padding: 3rem;
+  margin-bottom: 100px;
+}
+
+.price {
+  font-family: "Nunito", sans-serif;
+  font-size: 25px;
+  margin-top: 3rem;
+}
+
+.slider {
+  width: 300px;
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-style: none;
+  border-radius: 5px;
+  padding: 15px;
+  border: 2px solid #eee;
+  transition: 150ms;
+  cursor: pointer;
+}
+.add_item {
+  color: #fff;
+  background-color: #e81d1d;
+}
+.add_item:hover {
+  background-color: #bb1818;
+}
+hr {
+  border-color: #eee;
+}
+
+.info {
+  padding-left: 5rem;
+}
+
+.sizes {
+  display: inline;
+  font-weight: 400;
+  padding-left: 10px;
 }

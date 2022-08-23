@@ -3,15 +3,24 @@ import { useSelector, useDispatch } from "react-redux";
 import ProductCard from "../../Products/ProductCard/ProductCard.jsx";
 import { allProducts } from "../../../reducers/productSlice.js";
 import styles from "./Popular.module.css";
+import getRandomInt from "../../../utils/getRandomInt";
 
 const Popular = () => {
   const products = useSelector((state) => state.products.products);
   const dispatch = useDispatch();
+  let indexs = [];
   console.log(products);
   useEffect(() => {
     console.log(typeof products);
     dispatch(allProducts());
   }, []);
+  useEffect(() => {
+    indexs = [
+      getRandomInt(products.length),
+      getRandomInt(products.length),
+      getRandomInt(products.length),
+    ];
+  }, [products]);
   return (
     <>
       <h1 className={styles.section_title}>Productos Populares</h1>

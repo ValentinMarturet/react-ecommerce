@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import ProductCard from "../../Products/ProductCard/ProductCard.jsx";
 import styles from "./NewProducts.module.css";
 
-const Popular = () => {
+const NewProducts = () => {
   const products = useSelector((state) => state.products.products);
 
   const length = products[0] ? products.length : 0;
@@ -42,4 +42,4 @@ const Popular = () => {
   );
 };
 
-export default Popular;
+export default NewProducts;

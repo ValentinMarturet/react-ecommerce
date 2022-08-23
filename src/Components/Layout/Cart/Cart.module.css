@@ -9,6 +9,7 @@
   padding-bottom: 3rem;
   overflow: hidden;
   overflow-y: scroll;
+  z-index: 10;
 }
 
 .cart::-webkit-scrollbar {

@@ -15,7 +15,7 @@ const ProductCard = ({ name, price, img, Id }) => {
       {error && <p>{error}</p>}
       <h3 className={styles.name}>{name}</h3>
       <div className={styles.info}>
-        <span>${price}</span>
+        <span className={styles.price}>${price}</span>
         <Link
           className={`${styles.btn} ${styles.details}`}
           to={`/products/${Id}`}
