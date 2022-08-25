@@ -21,7 +21,7 @@ const Navigation = () => {
         <Link className={styles.nav_item} to="/products">
           Productos
         </Link>
-        <Link className={styles.nav_item} to="/">
+        <Link className={styles.nav_item} to="/about">
           Sobre Nosotros
         </Link>
         <Link className={styles.nav_item} to="/contact">

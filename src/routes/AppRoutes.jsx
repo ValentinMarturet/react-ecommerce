@@ -6,6 +6,7 @@ import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import { useDispatch } from "react-redux";
 import { allProducts } from "../reducers/productSlice";
 import Contact from "../pages/Contact/Contact";
+import About from "../pages/About/About";
 
 const AppRoutes = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const AppRoutes = () => {
       <Route path="/products" element={<Products />} />
       <Route path="/products/:productId" element={<ProductDetails />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/about" element={<About />} />
     </Routes>
   );
 };

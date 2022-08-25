@@ -1,8 +1,8 @@
 import React from "react";
-import image from "../../../assets/banner.jpg";
+
 import styles from "./Banner.module.css";
 
-const Banner = () => {
+const Banner = ({ image }) => {
   return (
     <div
       className={styles.banner}

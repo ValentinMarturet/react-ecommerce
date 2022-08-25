@@ -1,0 +1,15 @@
+.title_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title_line {
+  width: 25%;
+  height: 0;
+  border: 1px solid #eee;
+  align-self: center;
+}
+
+.title {
+  font-weight: 600;
+}
