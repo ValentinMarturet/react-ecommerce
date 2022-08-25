@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Title from "../../General/Title/Title.jsx";
 import ProductCard from "../../Products/ProductCard/ProductCard.jsx";
 import styles from "./NewProducts.module.css";
 
@@ -10,7 +11,7 @@ const NewProducts = () => {
 
   return (
     <>
-      <h1 className={styles.section_title}>Nuevos Productos</h1>
+      <Title>Nuevos Productos</Title>
       <div className={styles.product_container}>
         {products[0] && (
           <>

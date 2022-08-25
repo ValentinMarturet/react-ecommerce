@@ -4,6 +4,7 @@ import ProductCard from "../../Products/ProductCard/ProductCard.jsx";
 import { allProducts } from "../../../reducers/productSlice.js";
 import styles from "./Popular.module.css";
 import getRandomInt from "../../../utils/getRandomInt";
+import Title from "../../General/Title/Title.jsx";
 
 const Popular = () => {
   const products = useSelector((state) => state.products.products);
@@ -23,7 +24,7 @@ const Popular = () => {
   }, [products]);
   return (
     <>
-      <h1 className={styles.section_title}>Productos Populares</h1>
+      <Title>Productos Populares</Title>
       <div className={styles.product_container}>
         {products[0] && (
           <>
