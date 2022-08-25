@@ -1,16 +1,18 @@
 import React from "react";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div
-      style={{ marginTop: "200px", paddingBottom: "20px", color: "#353535" }}
-    >
-      <a
-        style={{ color: "#353535" }}
-        href="https://www.freepik.com/photos/closet"
-      >
-        Closet photo created by lookstudio - www.freepik.com
-      </a>
+    <div className={styles.footer}>
+      <div className={styles.link_container}>
+        <a
+          className={styles.links}
+          href="https://www.freepik.com/photos/closet"
+        >
+          Closet photo created by lookstudio - www.freepik.com
+        </a>
+      </div>
+      <div className={styles.contact_container}>LinkedIn github</div>
     </div>
   );
 };
