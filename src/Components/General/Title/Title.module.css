@@ -12,4 +12,6 @@
 
 .title {
   font-weight: 600;
+  max-width: 45%;
+  text-align: center;
 }

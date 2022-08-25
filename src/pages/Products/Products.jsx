@@ -1,4 +1,5 @@
 import React from "react";
+import Title from "../../Components/General/Title/Title";
 import Layout from "../../Components/Layout/Layout";
 import Navigation from "../../Components/Layout/Navigation/Navigation";
 import ProductList from "../../Components/Products/ProductList/ProductList";
@@ -6,7 +7,7 @@ import ProductList from "../../Components/Products/ProductList/ProductList";
 const Products = () => {
   return (
     <Layout>
-      Aqui una lista de productos
+      <Title>Productos</Title>
       <ProductList />
     </Layout>
   );
