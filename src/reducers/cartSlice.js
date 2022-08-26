@@ -27,7 +27,6 @@ export const cartSlice = createSlice({
       const index = state.cartItems
         .map((item) => item.id)
         .indexOf(action.payload.id);
-      console.log(index);
       state.cartItems.splice(index, 1);
     },
     clearCart: (state) => {

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import CartCard from "../CartCard/CartCard";
 import styles from "./Cart.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { isShowing, cartItems } = useSelector((state) => state.cart);
@@ -13,6 +14,8 @@ const Cart = () => {
       return "";
     }
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className={`${styles.cart} ${showCart()}`}>
@@ -33,6 +36,7 @@ const Cart = () => {
             />
           );
         })}
+      <button onClick={() => navigate("/checkout")}>checkout</button>
     </div>
   );
 };
