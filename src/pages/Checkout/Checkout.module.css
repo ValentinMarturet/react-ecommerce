@@ -3,3 +3,49 @@
   flex-direction: column;
   align-items: center;
 }
+
+.operations_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.operations {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkout_btn {
+  max-width: 200px;
+  height: 50px;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: calc(100% - 20px);
+  border: 1px solid #eee;
+  color: #eee;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  border: 2px solid #353535;
+  background-color: #353535;
+}
+
+.checkout_btn:hover {
+  background: #fff;
+  color: #353535;
+}
+
+.price {
+  font-family: "Nunito", sans-serif;
+}
+
+.total {
+  font-family: "Open Sans", sans-serif;
+  display: inline;
+  font-weight: 400;
+  font-size: 2rem;
+  padding-right: 1rem;
+}

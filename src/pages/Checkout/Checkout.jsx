@@ -4,10 +4,16 @@ import Layout from "../../Components/Layout/Layout";
 import Title from "../../Components/General/Title/Title";
 import CheckoutCard from "../../Components/Checkout/CheckoutCard/CheckoutCard";
 import { useSelector, useDispatch } from "react-redux";
+import Swal from "sweetalert2";
+import { clearCart } from "../../reducers/cartSlice";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const products = useSelector((state) => state.products.products);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   //   Funcion que encuentra un producto en el array de productos segun su id y devuelve el objeto producto
   const findProduct = (productArray, id) => {
@@ -19,6 +25,19 @@ const Checkout = () => {
       const product = findProduct(productArray, item.id);
       return acc + product.price * item.quantity;
     }, 0);
+  };
+
+  const handleCheckout = () => {
+    console.log("funciona");
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Compra registrada",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    dispatch(clearCart());
+    navigate("/");
   };
 
   return (
@@ -40,8 +59,19 @@ const Checkout = () => {
             );
           })}
       </div>
-      <div>
-        <h1>Total: {getTotalPrice(products, cartItems)}</h1>
+      <div className={styles.operations_container}>
+        <div className={styles.operations}>
+          <button
+            onClick={() => handleCheckout()}
+            className={styles.checkout_btn}
+          >
+            Comprar
+          </button>
+          <h1 className={styles.price}>
+            <h2 className={styles.total}>Total:</h2> $
+            {getTotalPrice(products, cartItems).toFixed(2)}
+          </h1>
+        </div>
       </div>
     </Layout>
   );
