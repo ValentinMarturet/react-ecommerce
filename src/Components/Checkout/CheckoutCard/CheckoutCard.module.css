@@ -13,10 +13,48 @@
   padding: 5px;
 }
 
+.text {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
 .img {
   height: 140px;
   width: auto;
   /* margin: 5px; */
+}
+
+.last_col {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.del_btn {
+  border: 1px solid #eee;
+  border-radius: 35px;
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.del_btn:hover {
+  background-color: #eee;
+}
+
+.price {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.quantity {
+  margin: 0;
+  font-weight: 600;
 }
 
 @media (min-width: 640px) {

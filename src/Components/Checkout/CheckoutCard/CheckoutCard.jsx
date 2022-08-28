@@ -16,13 +16,13 @@ const CheckoutCard = ({ img, name, price, quantity, id }) => {
         <img className={styles.img} src={image} />
       </div>
       <div className={styles.name}>
-        <h3>{name}</h3>
+        <h3 className={styles.text}>{name}</h3>
       </div>
-      <div>
-        <h3>
-          $ {price} X{quantity}
-        </h3>
-        <button onClick={() => dispatch(deleteItem({ id: id }))}>
+      <div className={styles.last_col}>
+        <button
+          className={styles.del_btn}
+          onClick={() => dispatch(deleteItem({ id: id }))}
+        >
           <IconContext.Provider
             value={{
               size: "1.2rem",
@@ -35,6 +35,8 @@ const CheckoutCard = ({ img, name, price, quantity, id }) => {
             <FiTrash />
           </IconContext.Provider>
         </button>
+        <h3 className={styles.price}>$ {price}</h3>
+        <h3 className={styles.quantity}>X{quantity}</h3>
       </div>
     </div>
   );
