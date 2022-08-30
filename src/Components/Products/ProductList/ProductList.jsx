@@ -15,9 +15,6 @@ const ProductList = () => {
 
   return (
     <>
-      <button onClick={() => dispatch(filterProducts("L"))}>
-        FilterProducts
-      </button>
       <div className={styles.prod_container}>
         {products &&
           products.map((current) => {
