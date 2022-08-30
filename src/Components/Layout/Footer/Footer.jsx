@@ -12,7 +12,6 @@ const Footer = () => {
           Closet photo created by lookstudio - www.freepik.com
         </a>
       </div>
-      {/* <div className={styles.contact_container}>LinkedIn github</div> */}
       <div className={styles.contact_container}>
         <a
           className={styles.contactButton}
