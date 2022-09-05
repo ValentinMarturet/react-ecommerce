@@ -10,9 +10,11 @@ import { addItem } from "../../reducers/cartSlice";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useState } from "react";
 
 const ProductDetails = () => {
   const { productId } = useParams();
+  const [cant, setCant] = useState(1);
   const product = useSelector((state) =>
     state.products.products.find((item) => item.id === parseInt(productId))
   );
@@ -29,6 +31,22 @@ const ProductDetails = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+  };
+
+  const handleIncrease = () => {
+    if (cant === 99) {
+      return;
+    }
+    const q = cant;
+    setCant(q + 1);
+  };
+
+  const handleDecrease = () => {
+    if (cant === 1) {
+      return;
+    }
+    const q = cant;
+    setCant(q - 1);
   };
 
   return (
@@ -69,12 +87,20 @@ const ProductDetails = () => {
               <button
                 className={`${styles.btn} ${styles.add_item}`}
                 onClick={() =>
-                  dispatch(addItem({ id: product.id, quantity: 1 }))
+                  dispatch(addItem({ id: product.id, quantity: cant }))
                 }
               >
                 Comprar
               </button>
-              <button onClick={() => console.log(product)}>Test</button>
+              <div className={styles.quantity}>
+                <button onClick={handleDecrease} className={styles.q_btn}>
+                  -
+                </button>
+                <span className={styles.q_num}>{cant}</span>
+                <button onClick={handleIncrease} className={styles.q_btn}>
+                  +
+                </button>
+              </div>
             </div>
           </div>
           <Popular />

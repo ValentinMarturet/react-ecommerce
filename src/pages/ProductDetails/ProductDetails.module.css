@@ -45,3 +45,38 @@ hr {
   font-weight: 400;
   padding-left: 10px;
 }
+.quantity {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.q_num,
+.q_btn {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: baseline;
+  font-size: 25px;
+  border: none;
+  background-color: #fff;
+  margin: 0;
+}
+
+.q_num {
+  font-size: 1.5rem;
+}
+
+.q_btn {
+  background-color: #eee;
+  transition: 200ms;
+}
+
+.q_btn:hover {
+  background-color: rgb(178, 178, 178);
+}
+
+.q_btn:active {
+  background-color: rgb(149, 149, 149);
+}
