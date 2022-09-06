@@ -10,9 +10,7 @@ const Popular = () => {
   const products = useSelector((state) => state.products.products);
   const dispatch = useDispatch();
   let indexs = [];
-  console.log(products);
   useEffect(() => {
-    console.log(typeof products);
     dispatch(allProducts());
   }, []);
   useEffect(() => {

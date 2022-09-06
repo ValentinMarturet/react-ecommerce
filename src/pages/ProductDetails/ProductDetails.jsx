@@ -11,15 +11,22 @@ import { addItem } from "../../reducers/cartSlice";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const ProductDetails = () => {
   const { productId } = useParams();
-  const [cant, setCant] = useState(1);
   const product = useSelector((state) =>
     state.products.products.find((item) => item.id === parseInt(productId))
   );
   const dispatch = useDispatch();
   const { loading, error, image } = useImage(product?.sku);
+
+  const [cant, setCant] = useState(1);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [product.id]);
+
   const {
     loading: loading2,
     error: error2,
