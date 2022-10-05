@@ -15,9 +15,13 @@ import { useEffect } from "react";
 
 const ProductDetails = () => {
   const { productId } = useParams();
-  const product = useSelector((state) =>
-    state.products.products.find((item) => item.id === parseInt(productId))
-  );
+  const products = useSelector((state) => state.products.products);
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    setProduct(products.find((item) => item.id === parseInt(productId)));
+  }, [products]);
+
   const dispatch = useDispatch();
   const { loading, error, image } = useImage(product?.sku);
 
@@ -58,7 +62,7 @@ const ProductDetails = () => {
 
   return (
     <Layout>
-      {product && (
+      {product.id && (
         <>
           <div className={styles.container}>
             <div className={styles.slider}>
@@ -87,7 +91,10 @@ const ProductDetails = () => {
               <h3>
                 Tamaños disponibles:{" "}
                 {product.availableSizes.map((item) => (
-                  <p className={styles.sizes}> {item} </p>
+                  <p className={styles.sizes} ket={item}>
+                    {" "}
+                    {item}{" "}
+                  </p>
                 ))}
               </h3>
               <h3 className={styles.price}>${product.price}</h3>
